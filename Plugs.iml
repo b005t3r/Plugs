@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="Plugs">
+    <configurations>
+      <configuration name="Plugs" target-platform="Desktop" pure-as="true" output-type="Library" output-file="Plugs.swc" output-folder="$MODULE_DIR$/../AllExtensionsTestProject/out/production/Plugs">
+        <dependencies target-player="12.0">
+          <entries>
+            <entry module-name="MedKit" build-configuration-name="MedKit">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="3432dcf6-adf8-4fec-80ee-5693c52e3aef">
+              <dependency linkage="Test" />
+            </entry>
+          </entries>
+          <sdk name="AIR SDK 4.0" />
+        </dependencies>
+        <compiler-options />
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="AIR SDK 4.0" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="MedKit" exported="" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="3432dcf6-adf8-4fec-80ee-5693c52e3aef" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libTest/flexunit-4.1.0-8-as3_4.1.0.16076.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
+
