@@ -3,10 +3,10 @@
  * Date: 14/08/14
  * Time: 16:50
  */
-package plugs.input {
-import plugs.output.IOutput;
-import plugs.output.IntOutput;
-import plugs.output.NumberOutput;
+package plugs.inputs {
+import plugs.IOutput;
+import plugs.outputs.IntOutput;
+import plugs.outputs.NumberOutput;
 
 public class NumberInput extends AbstractInput {
     public function NumberInput(name:String = null) {

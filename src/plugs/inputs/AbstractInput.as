@@ -3,13 +3,14 @@
  * Date: 14/08/14
  * Time: 11:04
  */
-package plugs.input {
+package plugs.inputs {
 import medkit.collection.ArrayList;
 import medkit.collection.List;
 
 import plugs.IConsumer;
+import plugs.IInput;
 
-import plugs.output.IOutput;
+import plugs.IOutput;
 
 public class AbstractInput implements IInput {
     protected var _consumer:IConsumer;
@@ -28,5 +29,7 @@ public class AbstractInput implements IInput {
     public function get name():String { return _name;}
 
     public function canConnect(output:IOutput):Boolean { throw new Error("abstract method"); }
+
+    public function toString():String { return _name; }
 }
 }

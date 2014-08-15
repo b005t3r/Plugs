@@ -3,17 +3,17 @@
  * Date: 14/08/14
  * Time: 10:50
  */
-package plugs.input {
+package plugs {
 import medkit.collection.List;
 
 import plugs.IConsumer;
-import plugs.output.IOutput;
+import plugs.IOutput;
 
 public interface IInput {
     function get consumer():IConsumer
     function set consumer(value:IConsumer):void
 
-    function get connections:List
+    function get connections():List
 
     function get name():String
 

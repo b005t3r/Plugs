@@ -3,11 +3,11 @@
  * Date: 14/08/14
  * Time: 17:22
  */
-package plugs.output {
-import plugs.input.BooleanInput;
-import plugs.input.IInput;
-import plugs.input.IntInput;
-import plugs.input.NumberInput;
+package plugs.outputs {
+import plugs.inputs.BooleanInput;
+import plugs.IInput;
+import plugs.inputs.IntInput;
+import plugs.inputs.NumberInput;
 
 public class BooleanOutput extends AbstractOutput {
     public function BooleanOutput(name:String = null) {

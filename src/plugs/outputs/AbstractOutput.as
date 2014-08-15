@@ -3,13 +3,15 @@
  * Date: 14/08/14
  * Time: 11:06
  */
-package plugs.output {
+package plugs.outputs {
 import medkit.collection.ArrayList;
 import medkit.collection.List;
 
+import plugs.IOutput;
+
 import plugs.IProvider;
 
-import plugs.input.IInput;
+import plugs.IInput;
 
 public class AbstractOutput implements IOutput {
     protected var _provider:IProvider;
@@ -28,5 +30,7 @@ public class AbstractOutput implements IOutput {
     public function get name():String { return _name; }
 
     public function canConnect(input:IInput):Boolean { throw new Error("abstract method"); }
+
+    public function toString():String { return _name; }
 }
 }
