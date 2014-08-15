@@ -31,6 +31,6 @@ public class AbstractOutput implements IOutput {
 
     public function canConnect(input:IInput):Boolean { throw new Error("abstract method"); }
 
-    public function toString():String { return _name; }
+    public function toString():String { return _name != null ? _name : ""; }
 }
 }

@@ -30,6 +30,6 @@ public class AbstractInput implements IInput {
 
     public function canConnect(output:IOutput):Boolean { throw new Error("abstract method"); }
 
-    public function toString():String { return _name; }
+    public function toString():String { return _name != null ? _name : ""; }
 }
 }
