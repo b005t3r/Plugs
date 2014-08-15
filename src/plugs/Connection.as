@@ -4,8 +4,8 @@
  * Time: 10:53
  */
 package plugs {
-import plugs.input.IInput;
-import plugs.output.IOutput;
+import plugs.IInput;
+import plugs.IOutput;
 
 public class Connection {
     public static function connect(input:IInput, output:IOutput):Connection {
@@ -40,7 +40,7 @@ public class Connection {
         _input.consumer.receivePushData(data, this);
     }
 
-    public function pullData(data:*):* {
+    public function pullData():* {
         return _output.provider.requestPullData(this);
     }
 }
