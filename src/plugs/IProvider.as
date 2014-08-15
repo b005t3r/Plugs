@@ -11,6 +11,6 @@ public interface IProvider {
 
     function get name():String
 
-    function requestPullData(connection:Connection):*
+    function requestPullData(outputConnection:Connection):*
 }
 }

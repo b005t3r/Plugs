@@ -8,7 +8,7 @@ import medkit.collection.ArrayList;
 import medkit.collection.List;
 
 import plugs.Connection;
-
+import plugs.IOutput;
 import plugs.IProvider;
 import plugs.error.PullingDataNotSupportedError;
 import plugs.error.PushingDataNotSupportedError;
@@ -25,6 +25,18 @@ public class AbstractProvider implements IProvider {
     public function get name():String { return _name; }
 
     public function pushData(connection:Connection = null):void { throw new PushingDataNotSupportedError(); }
-    public function requestPullData(connection:Connection):* { throw new PullingDataNotSupportedError(); }
+    public function requestPullData(outputConnection:Connection):* { throw new PullingDataNotSupportedError(); }
+
+    protected function addOutput(output:IOutput):void {
+        _outputs.add(output);
+
+        output.provider = this;
+    }
+
+    protected function removeOutput(output:IOutput):void {
+        output.provider = null;
+
+        _outputs.remove(output);
+    }
 }
 }

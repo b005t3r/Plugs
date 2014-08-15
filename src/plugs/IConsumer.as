@@ -11,6 +11,6 @@ public interface IConsumer {
 
     function get name():String
 
-    function receivePushData(data:*, connection:Connection):void
+    function receivePushData(data:*, inputConnection:Connection):void
 }
 }

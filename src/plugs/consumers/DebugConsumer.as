@@ -21,17 +21,19 @@ public class DebugConsumer extends AbstractConsumer {
     public function DebugConsumer(input:IInput, name:String = null) {
         super(name);
 
-        _inputs.add(input);
+        addInput(input);
     }
+
+    public function get input():IInput { return _inputs.get(0); }
 
     public function get dataReceivedFunc():Function { return _dataReceivedFunc; }
     public function set dataReceivedFunc(value:Function):void { _dataReceivedFunc = value; }
 
-    override public function receivePushData(data:*, connection:Connection):void {
-        if(connection.input != _inputs.get(0))
+    override public function receivePushData(data:*, inputConnection:Connection):void {
+        if(inputConnection.input != _inputs.get(0))
             throw new ArgumentError("input is not a part of this connection");
 
-        _dataReceivedFunc(data, connection);
+        _dataReceivedFunc(data, inputConnection);
     }
 
     override public function pullData(connection:Connection = null):void {
@@ -41,7 +43,7 @@ public class DebugConsumer extends AbstractConsumer {
         else {
             var connections:List = IInput(_inputs.get(0)).connections;
 
-            var count:int = connections..size();
+            var count:int = connections.size();
             for(var i:int = 0; i < count; ++i) {
                 var conn:Connection = connections.get(i);
 

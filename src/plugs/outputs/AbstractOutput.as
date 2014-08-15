@@ -22,8 +22,8 @@ public class AbstractOutput implements IOutput {
         _name = name;
     }
 
-    public function get provider():IProvider { return null; }
-    public function set provider(value:IProvider):void { }
+    public function get provider():IProvider { return _provider; }
+    public function set provider(value:IProvider):void { _provider = value; }
 
     public function get connections():List { return _connections; }
 

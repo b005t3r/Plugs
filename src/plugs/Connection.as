@@ -4,11 +4,8 @@
  * Time: 10:53
  */
 package plugs {
-import plugs.IInput;
-import plugs.IOutput;
-
 public class Connection {
-    public static function connect(input:IInput, output:IOutput):Connection {
+    public static function connect(output:IOutput, input:IInput):Connection {
         if(! input.canConnect(output) || ! output.canConnect(input))
             return null;
 
