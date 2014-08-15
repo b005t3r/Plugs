@@ -9,6 +9,8 @@ import medkit.collection.List;
 public interface IConsumer {
     function get inputs():List
 
+    function get name():String
+
     function receivePushData(data:*, connection:Connection):void
 }
 }

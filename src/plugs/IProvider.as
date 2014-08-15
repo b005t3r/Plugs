@@ -9,6 +9,8 @@ import medkit.collection.List;
 public interface IProvider {
     function get outputs():List
 
+    function get name():String
+
     function requestPullData(connection:Connection):*
 }
 }
