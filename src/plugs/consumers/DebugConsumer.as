@@ -11,12 +11,10 @@ import plugs.IInput;
 
 public class DebugConsumer extends AbstractConsumer {
     public static function traceData(data:*, connection:Connection):void {
-        trace("[", connection.output, " -> ", "] ", data);
+        trace("[", connection.output, "->", connection.input, "] ", data);
     }
 
-    protected var _dataReceivedFunc:Function = function(data:*, connection:Connection):void {
-        traceData(data, connection);
-    };
+    protected var _dataReceivedFunc:Function = traceData;
 
     public function DebugConsumer(input:IInput, name:String = null) {
         super(name);
